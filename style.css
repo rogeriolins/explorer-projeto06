@@ -19,30 +19,64 @@
 body {
   background-color: var(--color-background);
   font-family: "Mulish", sans-serif;
-
   font-size: 1.6rem;
+
+  display: grid;
+  justify-content: center;
+
+  padding: 72px 104px;
 }
 
-h1 {
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 368px);
+  /* 366px + 2px de borda */
+
+  row-gap: 48px;
+  column-gap: 60px;
+  /* ou gap: 48px 60px */
+
+  /* Centralizando o conteúdo do grid */
+  place-content: center;
+}
+
+header {
+  margin-bottom: 6.2rem;
+}
+
+header h1 {
   color: var(--color-title);
-  font-size: 5.9rem;
-  font-weight: 800;
+  font-weight: 900;
+  font-size: 5.6rem;
+  line-height: 7.2rem;
 }
 
-h2 {
+header p {
   color: var(--color-subtitle);
   font-size: 3.2rem;
   font-weight: 600;
+  line-height: 4rem;
 }
 
-h3 {
+.card {
+  background-color: var(--color-card-background);
+  border: 2px solid var(--color-card-border);
+  border-radius: 8px;
+
+  /* Garantir que todos os itens fiquem dentro do box */
+  overflow: hidden;
+}
+
+.card h2 {
   color: var(--color-subtitle);
   font-size: 3.6rem;
-  font-weight: 700;
+  font-weight: 900;
+  padding: 24px 32px 0;
 }
 
-p {
+.card p {
   color: var(--color-text);
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
+  padding: 24px 32px 32px;
 }
